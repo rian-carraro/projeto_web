@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desenvolvimento Profissional com Flask</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #333;
+      line-height: 1.7;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 20px;
+      max-width: 800px;
+      opacity: 0.9;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 14px 30px;
+      border-radius: 30px;
+      border: none;
+      background: #00c6ff;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #0072ff;
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 80px 10%;
+      background: white;
+    }
+
+    section:nth-child(even) {
+      background: #f4f6f9;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #203a43;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-size: 17px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: #2c5364;
+    }
+
+    .highlight {
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      color: white;
+      padding: 60px 10%;
+      text-align: center;
+    }
+
+    .highlight h2 {
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 32px;
+      }
+      header p {
+        font-size: 16px;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+  <header>
+    <h1>Desenvolvimento Completo com Flask</h1>
+    <p>
+      Flask é um microframework web em Python utilizado para construir aplicações web modernas,
+      APIs RESTful, sistemas administrativos, plataformas SaaS e muito mais.
+      Leve, flexível e poderoso.
+    </p>
+    <a href="#sobre" class="btn">Explorar Conteúdo</a>
+  </header>
+
+  <section id="sobre">
+    <h2>O que é Flask?</h2>
+    <p>
+      Flask é um microframework web escrito em Python que fornece as ferramentas essenciais
+      para desenvolvimento de aplicações web. Ele é chamado de "micro" porque não impõe
+      dependências ou estruturas rígidas, permitindo que o desenvolvedor escolha
+      as bibliotecas e padrões que melhor atendem ao projeto.
+    </p>
+    <p>
+      Criado para ser simples e extensível, Flask é amplamente utilizado
+      em startups, projetos acadêmicos, APIs profissionais e sistemas empresariais.
+    </p>
+  </section>
+
+  <section>
+    <h2>Principais Recursos do Flask</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Sistema de Rotas</h3>
+        <p>Permite mapear URLs para funções Python, organizando a navegação da aplicação de forma simples e clara.</p>
+      </div>
+
+      <div class="card">
+        <h3>Templates Dinâmicos</h3>
+        <p>Utiliza o mecanismo Jinja2 para gerar HTML dinâmico com integração de dados do backend.</p>
+      </div>
+
+      <div class="card">
+        <h3>Integração com Banco de Dados</h3>
+        <p>Compatível com MySQL, PostgreSQL, SQLite e outros bancos via ORM como SQLAlchemy.</p>
+      </div>
+
+      <div class="card">
+        <h3>Criação de APIs REST</h3>
+        <p>Ideal para desenvolvimento de APIs modernas que se comunicam com front-ends React, Vue ou aplicativos mobile.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Arquitetura e Estrutura de Projeto</h2>
+    <p>
+      Um projeto Flask geralmente segue uma estrutura organizada contendo:
+    </p>
+    <p>
+      • Arquivo principal da aplicação (app.py)  
+      • Pasta templates (HTML)  
+      • Pasta static (CSS, JS, imagens)  
+      • Modelos de banco de dados  
+      • Controladores (rotas e lógica de negócio)  
+    </p>
+    <p>
+      Essa organização permite escalabilidade e manutenção facilitada.
+    </p>
+  </section>
+
+  <section>
+    <h2>Vantagens do Flask</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Flexibilidade Total</h3>
+        <p>Você escolhe as ferramentas e bibliotecas que deseja integrar.</p>
+      </div>
+
+      <div class="card">
+        <h3>Alta Performance</h3>
+        <p>Por ser leve, é rápido e eficiente para aplicações web modernas.</p>
+      </div>
+
+      <div class="card">
+        <h3>Grande Comunidade</h3>
+        <p>Possui vasta documentação e comunidade ativa para suporte.</p>
+      </div>
+
+      <div class="card">
+        <h3>Escalável</h3>
+        <p>Pode começar simples e evoluir para sistemas empresariais complexos.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="highlight">
+    <h2>Flask é Ideal Para:</h2>
+    <p>
+      Sistemas de gestão • APIs REST • Aplicações corporativas • MVPs • Projetos acadêmicos • Plataformas SaaS
+    </p>
+  </div>
+
+  <footer>
+    © 2026 - Desenvolvimento Profissional com Flask | Todos os direitos reservados
+  </footer>
+
+</body>
+</html>
