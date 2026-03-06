@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão</title>
+</head>
+
+
+<body>
+
+
+    <h1>Recebendo Variaveis Python</h1>
+    <p><b>Nome:</b> {{ nome }}</p>
+    <p><b>Calculo de idade:</b> Nasceu em: [{{ ano_nascimento }}] e tem: {{ idade }} anos</p>
+    <p><b>Você tera 50 anos em:</b> {{ ano_nascimento + 50 }}</p>
+
+    <h1>Filtros de texto</h1>
+    <p>Deixando o texto em Maiusculas: {{ nome|upper }}</p>
+    <p>Deixando o texto em Minusculas: {{ nome|lower }}</p>
+    <p>Deixando texto truncado: {{ nome|truncate(5) }}</p>
+
+    <h1>Usando IF/ELIF e ELSE</h1>
+    {% if ativo == True %}
+    <p style="color: green">Ativo</p>
+    {% elif ativo == 'erro' %}
+    <p style="color: red">Erro</p>
+    {% else %}
+    <p style="color: yellow">Inativo</p>
+    {% endif %}
+
+    <h1>FOR</h1>
+    {# loop.index: número da iteração atual (começa em 1) #}
+    <ul>
+        {% for user in pessoas %}
+        <li>{{ loop.index }} - {{ user }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+
+</html>

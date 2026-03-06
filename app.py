@@ -31,5 +31,18 @@ def exibe_cor(cor1):
 def exibe_cor2(cor1,cor2):
     return f'<h1 style="color:{cor1}">A cor 1 foi: {cor1} e <b style="color:{cor2}">{cor2}</b></h1> '
 
+@app.route('/codigos/<int:ano_nascimento>')
+def exibe_codigos(ano_nascimento):
+    
+    dados = {
+        'nome': "rian",
+        'ano_nascimento': ano_nascimento,
+        'idade': (2026 - ano_nascimento),
+        'texto' : "Vamos escrever um texto bem longo para que o truncante funcione!",
+        'ativo' : 'erro',
+        'pessoas': ['João', 'Maria', 'José']
+    }
+    return render_template('codigos.html', **dados)
+
 if __name__ == '__main__':
     app.run(debug=True)
