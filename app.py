@@ -44,5 +44,18 @@ def exibe_codigos(ano_nascimento):
     }
     return render_template('codigos.html', **dados)
 
+@app.route('/home')
+def exibe_home():
+    return render_template('blocos/home.html')
+
+@app.route('/produtos')
+def exibe_produtos():
+    return render_template('blocos/produtos.html')
+
+@app.route('/perfil')
+def exibe_perfil():
+    return render_template('blocos/perfil.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
